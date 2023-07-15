@@ -1,0 +1,67 @@
+@extends('components.admin')
+@section('content')
+
+<div class="row justify-content-center">
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title text-center mb-5">All Product</h4>
+                <div class="table-responsive">
+                    <table class="table text-center">
+                        <thead>
+                            <tr>
+                                <th>S/N</th>
+                                <th>ID</th>
+                                <th>Category</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @php
+                            $kanta = 1;
+                            @endphp
+
+                            @foreach ($products as $product)
+
+                            <tr>
+                                <td> {{$kanta++}}</td>
+                                <td>{{$product->id}}</td>
+                                <td> {{$product->category}} </td>
+                                <td> {{$product->description}} </td>
+                                <td> {{$product->price}} </td>
+
+                                <td>
+                                    <form action="/get-product/{{$product->id}}" method="get">
+                                        @csrf
+                                        <button type="submit"
+                                            class='btn btn-outline-warning btn-sm edit-button'>Update</button>
+
+                                    </form>
+
+                                    <form action="/delete-product/{{$product->id}}" method="post"
+                                        onsubmit="validateDelete(event)">
+                                        @csrf
+                                        <input type="submit" class='btn btn-outline-danger btn-sm m-2' name="btndelete"
+                                            value="Delete">
+                                    </form>
+                                </td>
+                            </tr>
+
+                            @endforeach
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4 m-3">
+        <a href="/addproduct" class="btn form-control" style="background-color:#2274A5;color:white">Add Category</a>
+    </div>
+</div>
+
+@endsection

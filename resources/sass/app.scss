@@ -1,0 +1,37 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+@import '~bootstrap/scss/bootstrap';
+@import 'style';
+@import 'superslides';
+@import 'app';
+@import 'animate';
+@import 'baguetteBox.min';
+@import 'bootsnav';
+@import 'boostrap-select';
+@import 'bootstrap.min';
+@import 'carousel-ticker';
+@import 'code_animate';
+@import 'custom';
+@import 'jquery-ui';
+@import 'owl.carousel.min';
+@import 'responsive';
+@import 'all';
+@import 'mystyle';
+@import 'style.min';
+@import 'new-style.min';
+
+// corona template
+@import 'assets/vendors/css/vendor.bundle.base';
+@import 'assets/vendors/jvectormap/jquery-jvectormap';
+@import 'assets/vendors/flag-icon-css/css/flag-icon.min';
+@import 'assets/vendors/owl-carousel-2/owl.carousel.min';
+@import 'assets/vendors/owl-carousel-2/owl.theme.default.min';
+@import 'assets/images/favicon.png';
+@import 'assets/css/style.css';
